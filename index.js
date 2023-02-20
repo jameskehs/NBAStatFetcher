@@ -14,7 +14,9 @@ app.get("/lastGameJSON", async (req, res, next) => {
   try {
     const URL =
       "https://stats.nba.com/stats/leaguedashplayerstats?College=&Conference=&Country=&DateFrom=&DateTo=&Division=&DraftPick=&DraftYear=&GameScope=&GameSegment=&Height=&LastNGames=1&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlayerExperience=&PlayerPosition=&PlusMinus=N&Rank=N&Season=2022-23&SeasonSegment=&SeasonType=Regular%20Season&ShotClockRange=&StarterBench=&TeamID=0&VsConference=&VsDivision=&Weight=";
-    const config = { headers: { "Content-Type": "application/json", Referer: "https://www.nba.com/", "Cache-Control": "no-cache" } };
+    const config = {
+      headers: { "Content-Type": "application/json", Referer: "https://www.nba.com/", "Cache-Control": "no-cache", Host: "stats.nba.com" },
+    };
     const {
       data: { resultSets },
     } = await axios.get(URL, config);
