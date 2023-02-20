@@ -36,32 +36,6 @@ app.get("/lastGameStats", async (req, res, next) => {
     }
     const html = `<table><tr>${tableHeaders}</tr>${tableBody}</table>`;
     res.send(html);
-    // let template_table_header = {
-    //   "<>": "tr",
-    //   html: [],
-    // };
-    // let template_table_body = {
-    //   "<>": "tr",
-    //   html: [],
-    // };
-
-    // for (i = 0; i < resultSets[0].headers.length; i++) {
-    //   template_table_header.html.push({ "<>": "th", html: resultSets[0].headers[i] });
-    // }
-    // for (i = 0; i < resultSets[0].rowSet.length; i++) {
-    //   for (j = 0; j < resultSets[0].rowSet[i].length; j++) {
-    //     template_table_body.html.push({ "<>": "td", html: resultSets[0].rowSet[i][j] });
-    //   }
-    // }
-    // console.log(template_table_body);
-    // let table_header = json2html.transform(resultSets[0].headers, template_table_header);
-    // let table_body = "";
-    // for (i = 0; i < resultSets[0].rowSet.length; i++) {
-    //   for (j = 0; j < resultSets[0].rowSet[i].length; j++) {
-    //     table_body += json2html.transform(resultSets[0].rowSet[i][j], template_table_header);
-    //   }
-    // }
-    // res.send(table_header);
   } catch (error) {
     console.log("ERROR", error);
   }

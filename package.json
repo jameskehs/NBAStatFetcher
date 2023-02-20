@@ -93,7 +93,8 @@
     "vary": "^1.1.2"
   },
   "scripts": {
-    "server:dev": "nodemon index.js"
+    "server:dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC"
